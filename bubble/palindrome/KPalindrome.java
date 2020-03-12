@@ -53,6 +53,23 @@ public class KPalindrome {
     }
 
     static class LPS {
+        public boolean solve(String s, int k) {
+            String r = new StringBuilder(s).reverse().toString();
+            int len = r.length();
 
+            int[][] T = new int[len+1][len+1];
+
+            for (int i = 0; i < len; i++) {
+                for (int j = 0; j < len; j++) {
+                    if(s.charAt(i)==r.charAt(j)) {
+                        T[i+1][j+1] = T[i][j] + 1;
+                    }
+                    else {
+                        T[i+1][j+1] = Math.max(T[i][j+1], T[i+1][j]);
+                    }
+                }
+            }
+            return (len - T[len][len] <= k);
+        }
     }
 }
