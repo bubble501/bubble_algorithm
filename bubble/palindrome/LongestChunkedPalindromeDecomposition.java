@@ -13,7 +13,7 @@ public class LongestChunkedPalindromeDecomposition {
             for (int i = 0; i < text.length(); i++) {
                 int j = text.length() -1 - i;
                 left = left + text.charAt(i);
-                right = right + text.charAt(j); 
+                right = text.charAt(j)+ right; 
                 if(left.equals(right)) {
                     res +=1;
                     left = "";
@@ -22,5 +22,10 @@ public class LongestChunkedPalindromeDecomposition {
             }
             return res;
         }
+    }
+
+    public static void main(String[] args) {
+        S1 instance = new S1();
+        System.out.println(instance.solve("ghiabcdefhelloadamhelloabcdefghi"));
     }
 }

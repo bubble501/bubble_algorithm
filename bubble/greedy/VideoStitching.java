@@ -1,5 +1,4 @@
 package bubble.greedy;
-import java.lang.management.ManagementFactory;
 import java.util.*;
 /**
  * VideoStitching

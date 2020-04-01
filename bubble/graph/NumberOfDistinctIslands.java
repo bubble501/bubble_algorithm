@@ -12,7 +12,6 @@ public class NumberOfDistinctIslands {
 
     public int solve(int[][] grid) {
         if (grid == null || grid.length < 1 || grid[0].length < 1) return 0;
-        int m = grid.length, n = grid[0].length;
         Set<String> res = new HashSet<>();
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {

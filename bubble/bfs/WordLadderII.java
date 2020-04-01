@@ -36,7 +36,7 @@ public class WordLadderII {
                             parents.computeIfAbsent(w, k->new ArrayList<>()).add(p);
                             found = true;
                         } else {
-                            int orgStep = stesp.getOrDefault(w, -1);
+                            int orgStep = steps.getOrDefault(w, -1);
                             if (step < orgStep) {
                                 parents.computeIfAbsent(w, k->new ArrayList<>()).add(p);
                             } 
@@ -54,16 +54,16 @@ public class WordLadderII {
         if (found) {
             List<String> curr = new ArrayList<>();
             curr.add(endWord);
-
         }
+        return res;
     }
 
-    private void getPaths(String word, 
-                          String beginWord, 
-                          Map<String, List<String>> parents, 
-                          List<String> curr, 
-                          List<ArrayList<String>> ans){
+    // private void getPaths(String word, 
+    //                       String beginWord, 
+    //                       Map<String, List<String>> parents, 
+    //                       List<String> curr, 
+    //                       List<ArrayList<String>> ans){
         
-    }
+    // }
     
 }
